@@ -16,7 +16,7 @@ class StudentsTableSeeder extends Seeder
         foreach (range(1,10) as $index) {
             DB::table('students')->insert([
                 'student_no' => $faker->numerify("S-20##-###-###"),
-                'section_id' => 1,
+                'section_id' => $faker->randomNumber(1),
                 'first_name' => $faker->firstName,
                 'last_name' => $faker->lastName,
                 'middle_name' => $faker->lastName,

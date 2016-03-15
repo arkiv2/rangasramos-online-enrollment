@@ -13,6 +13,7 @@ class Student extends Model {
 
     public function subjects()
     {
-        return $this->belongsToMany('\App\Subject');
+        $section = $this->section;
+        return $section->subjects();
     }
 }

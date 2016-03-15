@@ -16,6 +16,7 @@ class CreateSubjectsTable extends Migration
             $table->increments('id');
             $table->string('subject_name');
             $table->string('subject_code');
+            $table->integer('section_id');
             $table->timestamps();
         });
     }

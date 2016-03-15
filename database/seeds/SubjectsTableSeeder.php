@@ -13,10 +13,11 @@ class SubjectsTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        foreach (range(1,10) as $index) {
+        foreach (range(1,20) as $index) {
             DB::table('subjects')->insert([
                 'subject_name' => $faker->word,
-                'subject_code' => $faker->numerify("SUBJ-###-##")
+                'subject_code' => $faker->numerify("SUBJ-###-##"),
+                'section_id' => $faker->randomNumber(1)
             ]);
         }
     }

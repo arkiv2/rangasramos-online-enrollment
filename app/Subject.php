@@ -13,7 +13,7 @@ class Subject extends Model {
 
     public function students()
     {
-        return $this->belongsToMany('App\Student');
+        return $this->hasManyThrough('App\Student', 'App\Section');
     }
 
 }

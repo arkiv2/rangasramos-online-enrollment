@@ -15,6 +15,6 @@ class Section extends Model {
 
     public function subjects()
     {
-        return $this->belongsToMany('App\Subject');
+        return $this->hasMany('App\Subject');
     }
 }

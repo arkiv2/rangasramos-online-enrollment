@@ -13,9 +13,9 @@ class SectionsTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        foreach (range(1,10) as $index) {
+        foreach (range(1,20) as $index) {
             DB::table('sections')->insert([
-                'section_name' => $faker->word
+                'section_name' => $faker->word,
             ]);
         }
     }
